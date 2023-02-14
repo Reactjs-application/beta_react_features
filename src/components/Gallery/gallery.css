@@ -1,0 +1,15 @@
+.gallery {
+  padding: 10px;
+}
+
+.gallery h3 {
+  color: var(--text-color);
+}
+
+.gallery img {
+  margin: 0 10px;
+}
+
+.gallery .viewMore {
+  width: 20%;
+}
