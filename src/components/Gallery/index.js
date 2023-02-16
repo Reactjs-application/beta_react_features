@@ -3,6 +3,10 @@ import "./gallery.css";
 import { Button } from "../../layout/Button";
 
 export default function Gallery() {
+  const handleClick = () => {
+    alert("clicked");
+  };
+
   return (
     <div className="gallery">
       <h3>Amazing scientists</h3>
@@ -19,6 +23,7 @@ export default function Gallery() {
           size="1rem"
           weight="600"
           borderRadius="4px"
+          onClick={handleClick}
         >
           View more
         </Button>

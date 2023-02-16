@@ -1,0 +1,18 @@
+.bot {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+}
+
+.bot .parentBox {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.bot .parentBox .childBox {
+  cursor: pointer;
+}

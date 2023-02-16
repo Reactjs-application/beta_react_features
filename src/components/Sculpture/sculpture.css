@@ -1,0 +1,9 @@
+.sculpture {
+  margin: 1rem;
+}
+
+.sculpture .change_sculpture {
+  width: 15%;
+  display: flex;
+  align-items: center;
+}

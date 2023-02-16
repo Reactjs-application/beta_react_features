@@ -1,20 +1,33 @@
 import React from "react";
 import "./button.css";
 
-export function Button(props) {
-  const createClass = "btn_wrapper " + props.className;
+export function Button({
+  children,
+  padding,
+  borderRadius,
+  size,
+  weight,
+  onClick,
+  disabled,
+  className,
+  margin,
+}) {
+  const createClass = "btn_wrapper " + className;
 
   return (
     <button
       className={createClass}
       style={{
-        padding: props.padding || "auto",
-        borderRadius: props.borderRadius || "auto",
-        fontSize: props.size || "auto",
-        fontWeight: props.weight || "auto",
+        padding: padding || "auto",
+        borderRadius: borderRadius || "auto",
+        fontSize: size || "auto",
+        fontWeight: weight || "auto",
+        margin: margin || "auto",
       }}
+      onClick={onClick || null}
+      disabled={disabled || false}
     >
-      {props.children}
+      {children}
     </button>
   );
 }
