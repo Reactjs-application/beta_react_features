@@ -5,3 +5,7 @@
 .dark-theme {
   --text-color: white;
 }
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
