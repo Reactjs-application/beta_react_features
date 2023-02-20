@@ -1,5 +1,6 @@
-import React, { Suspense, useState } from "react";
-import ArtistPage from "./ArtistPage";
+import React, { Suspense, useState, lazy } from "react";
+
+const ArtistPage = lazy(() => import("./ArtistPage"));
 
 export default function ReactPackage() {
   return (

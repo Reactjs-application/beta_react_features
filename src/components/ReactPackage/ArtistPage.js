@@ -1,16 +1,17 @@
-import React, { Suspense } from "react";
-import Albums from "./Albums";
+import React, { Suspense, lazy } from "react";
+
+const Albums = lazy(() => import("./Albums"));
 
 export default function ArtistPage({ artist }) {
   return (
     <>
       <h1>{artist.name}</h1>
       <Biography />
-      <Suspense fallback={<Spinner />}>
-        <Panel>
+      <Panel>
+        <Suspense fallback={<Spinner />}>
           <Albums />
-        </Panel>
-      </Suspense>
+        </Suspense>
+      </Panel>
     </>
   );
 }

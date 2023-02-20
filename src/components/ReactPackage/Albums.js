@@ -18,9 +18,6 @@ export default function Albums() {
       }
     }
     LoadData();
-    return () => {
-      setSculptureList([]);
-    };
   }, []);
 
   return (

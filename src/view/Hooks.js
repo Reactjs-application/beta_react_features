@@ -1,6 +1,6 @@
 import React from "react";
-import ReactPackage from "../components/ReactPackage";
+import IdHook from "../hooks/IdHook";
 
 export default function Hooks() {
-  return <ReactPackage />;
+  return <IdHook />;
 }
