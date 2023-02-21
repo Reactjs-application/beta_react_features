@@ -1,6 +1,6 @@
 import React from "react";
-import ReducerHook from "../hooks/ReducerHook";
+import TransitionHook from "../hooks/TransitionHook";
 
 export default function Hooks() {
-  return <ReducerHook />;
+  return <TransitionHook />;
 }
