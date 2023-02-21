@@ -1,6 +1,6 @@
 import React from "react";
-import IdHook from "../hooks/IdHook";
+import ReducerHook from "../hooks/ReducerHook";
 
 export default function Hooks() {
-  return <IdHook />;
+  return <ReducerHook />;
 }
