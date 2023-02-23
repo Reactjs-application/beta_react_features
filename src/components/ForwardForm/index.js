@@ -1,17 +1,18 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useRef, useImperativeHandle } from "react";
 
 export default function ForwardForm() {
-  const InputRef = useRef();
+  const ref = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(InputRef.current.value);
+    const value = ref.current.focus();
+    console.log(value);
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <MyInput ref={InputRef} />
+        <MyInput name="text" type="text" ref={ref} />
         <button>Submit</button>
       </form>
     </div>
@@ -19,5 +20,19 @@ export default function ForwardForm() {
 }
 
 const MyInput = forwardRef(function MyInput(props, ref) {
-  return <input type="text" {...props} ref={ref} />;
+  const InputRef = useRef();
+
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        focus() {
+          return InputRef.current.value;
+        },
+      };
+    },
+    []
+  );
+
+  return <input {...props} ref={InputRef} />;
 });

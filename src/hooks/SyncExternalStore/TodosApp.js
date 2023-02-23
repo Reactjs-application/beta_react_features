@@ -5,7 +5,11 @@ let todos = [];
 let listeners = [];
 
 export default function TodosApp() {
-  const currentTodo = useSyncExternalStore(subscribe, getSnapshot);
+  const currentTodo = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshort
+  );
 
   return (
     <div>
@@ -37,6 +41,10 @@ function subscribe(listener) {
 
 function getSnapshot() {
   return todos;
+}
+
+function getServerSnapshort() {
+  return true;
 }
 
 function emitChange() {

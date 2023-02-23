@@ -1,6 +1,6 @@
 import React from "react";
-import SyncExternalStore from "../hooks/SyncExternalStore";
+import Popup from "../components/Popup";
 
 export default function Hooks() {
-  return <SyncExternalStore />;
+  return <Popup />;
 }
