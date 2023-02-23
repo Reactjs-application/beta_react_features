@@ -1,6 +1,6 @@
 import React from "react";
-import TransitionHook from "../hooks/TransitionHook";
+import SyncExternalStore from "../hooks/SyncExternalStore";
 
 export default function Hooks() {
-  return <TransitionHook />;
+  return <SyncExternalStore />;
 }
