@@ -1,6 +1,6 @@
 import React from "react";
-import Popup from "../components/Popup";
+import EventHandler from "../components/EventHandler";
 
 export default function Hooks() {
-  return <Popup />;
+  return <EventHandler />;
 }

@@ -1,9 +1,11 @@
 .light-theme {
   --text-color: black;
+  --main-heading: grey;
 }
 
 .dark-theme {
   --text-color: white;
+  --main-heading: rgb(182, 31, 31);
 }
 
 .not-allowed {

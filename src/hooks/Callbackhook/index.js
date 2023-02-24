@@ -24,6 +24,19 @@ export default function Callbackhook() {
           +
         </button>
       </div>
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <polygon points="60,30 90,90 30,90">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 60 70"
+            to="360 60 70"
+            dur="10s"
+            repeatCount="indefinite"
+          />
+        </polygon>
+      </svg>
     </>
   );
 }
